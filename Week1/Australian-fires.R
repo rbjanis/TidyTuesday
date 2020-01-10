@@ -23,6 +23,7 @@ filter(temp, temp_type == "max") %>%
   ggtitle("Average high temperatures in Australian cites are increasing") +
   labs(subtitle = "1919-2019") +
   bbplot::bbc_style() +
+  annotate("text", label = "Large spike in high temperatures in 2019", x = 1996.5, y = 27.3, size = 6)
 
 ggsave("Week1/high-temperatures.png")
 
