@@ -20,5 +20,9 @@ filter(temp, temp_type == "max") %>%
   scale_x_continuous(name = "Year", breaks = seq(1910, 2020, 10)) +
   scale_y_continuous(name = "High Temperature (Celsius)", breaks = seq(14, 30, 2)) +
   scale_color_discrete(name = "City") +
-  ggtitle("Average daily high temperatures in Australian cites have increased over the past 100 years")
+  ggtitle("Average high temperatures in Australian cites are increasing") +
+  labs(subtitle = "1919-2019") +
+  bbplot::bbc_style() +
+
 ggsave("Week1/high-temperatures.png")
+
